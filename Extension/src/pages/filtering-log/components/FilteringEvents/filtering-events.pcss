@@ -7,6 +7,15 @@
         box-sizing: border-box;
     }
 
+    .list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
     &__inner {
         table-layout: fixed;
         width: 100%;
@@ -130,6 +139,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        /* do not remove "position" and "z-index" */
+        /* due to AG-10446 */
         position: relative;
         z-index: 10;
     }
